@@ -33,8 +33,13 @@ function QuickSort(array, left, right) {
     right
   );
 }
-
-// 对 [left,right] 区间的元素分别于区值进行比对
+/**
+ * 对 [left,right] 区间的元素分别于区值进行比对
+ * @param {array} array  原数组
+ * @param {number} pivot 分区点
+ * @param {number} left  左边界
+ * @param {number} right 右边界
+ */
 function partition(array, pivot, left, right) {
   console.log(`partition array is ${JSON.stringify(array)}`);
   // 获取区值
@@ -55,7 +60,12 @@ function partition(array, pivot, left, right) {
   swap(array, startIndex, pivot);
   return startIndex;
 }
-
+/**
+ * 交换位置
+ * @param {array} array  原数组
+ * @param {number} left  左值
+ * @param {number} right 右值
+ */
 function swap(array, left, right) {
   [array[left], array[right]] = [array[right], array[left]];
 }

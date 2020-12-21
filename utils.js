@@ -6,8 +6,8 @@ ${Object.keys(module.exports).join('\n------------\n')}
 
 /**
  * 生成数组根据
- * @param length   Number    数组长度
- * @param range    [Start,End] | Number 数组边界
+ * @param {number} length     数组长度
+ * @param {[Start,End] | Number} range     数组边界
  * @returns 原数组
  */
 const getArray = (length, range) => {

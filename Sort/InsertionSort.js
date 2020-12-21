@@ -40,5 +40,3 @@ const InsertionSort = function InsertionSort(array) {
 console.log(`
   Sort array is: ${JSON.stringify(InsertionSort(arr))}
 `);
-
-Promise;
