@@ -13,7 +13,7 @@ ${Object.keys(module.exports).join('\n------------\n')}
 const getArray = (length, range) => {
   const res = [];
   const getItem = (start = 0, end = Number.MAX_SAFE_INTEGER) =>
-    (Math.random() * (end + 1) - start) | 0;
+    (Math.random() * (end - start + 1) + start) | 0;
 
   if (Array.isArray(range) && range.length <= 2) {
     for (var i = 0; i < length; i++) {
@@ -32,7 +32,7 @@ const getArray = (length, range) => {
 
   return res;
 };
-Promise;
+
 module.exports = {
   getArray,
   logger: ToolsLogger
