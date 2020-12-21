@@ -1,3 +1,7 @@
+# JavaScript-Algorithm-Training
+
+和笔者一同巩固前端基础知识，了解并熟悉框架实现原理，数据结构与算法训练吧~
+
 ## Algorithm-training
 
 > **ISSUE**
