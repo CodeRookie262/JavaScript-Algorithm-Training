@@ -1,4 +1,4 @@
-const { getArray } = require('../utils');
+const { getArray } = require('../../utils');
 
 // 冒泡排序
 console.log('==========BubbleSort=============');

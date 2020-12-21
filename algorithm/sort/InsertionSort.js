@@ -1,4 +1,4 @@
-const { getArray, logger } = require('../utils');
+const { getArray, logger } = require('../../utils');
 // logger();
 console.log('============Insertion Sort=============');
 

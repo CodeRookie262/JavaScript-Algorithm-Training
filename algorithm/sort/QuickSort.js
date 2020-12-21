@@ -1,4 +1,4 @@
-const { getArray } = require('../utils');
+const { getArray } = require('../../utils');
 
 const array = getArray(11, 100);
 
@@ -41,7 +41,7 @@ function QuickSort(array, left, right) {
  * @param {number} right 右边界
  */
 function partition(array, pivot, left, right) {
-  console.log(`partition array is ${JSON.stringify(array)}`);
+  // console.log(`partition array is ${JSON.stringify(array)}`);
   // 获取区值
   let pivotValue = array[pivot];
   // 标记起点

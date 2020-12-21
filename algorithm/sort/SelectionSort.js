@@ -1,4 +1,4 @@
-const { getArray } = require('../utils');
+const { getArray } = require('../../utils');
 
 const array = getArray(10, 10);
 
