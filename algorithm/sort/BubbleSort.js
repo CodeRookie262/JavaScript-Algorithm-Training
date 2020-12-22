@@ -34,6 +34,8 @@ const BubbleSort = function BubbleSort(array) {
   return array;
 };
 
-console.log(`
-  Sort array is: ${JSON.stringify(BubbleSort(arr))}
-  `);
+// console.log(`
+//   Sort array is: ${JSON.stringify(BubbleSort(arr))}
+//   `);
+
+module.exports = BubbleSort;

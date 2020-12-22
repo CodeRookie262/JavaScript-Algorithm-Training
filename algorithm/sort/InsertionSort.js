@@ -1,6 +1,5 @@
 const { getArray, logger } = require('../../utils');
 // logger();
-console.log('============Insertion Sort=============');
 
 const arr = getArray(10, 10);
 
@@ -37,6 +36,8 @@ const InsertionSort = function InsertionSort(array) {
   return array;
 };
 
-console.log(`
-  Sort array is: ${JSON.stringify(InsertionSort(arr))}
-`);
+// console.log(`
+//   Sort array is: ${JSON.stringify(InsertionSort(arr))}
+// `);
+
+module.exports = InsertionSort;

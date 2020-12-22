@@ -21,7 +21,8 @@ const getArray = (length, range) => {
 
   console.log(`
   The original array is: ${JSON.stringify(res)} \n
-  Sort array is: ${JSON.stringify(res.slice().sort((a, b) => a - b))}
+  Sort: ${JSON.stringify(res.slice().sort((a, b) => a - b))}\n
+  Reverse sort: ${JSON.stringify(res.slice().sort((a, b) => b - a))}
   `);
 
   return res;

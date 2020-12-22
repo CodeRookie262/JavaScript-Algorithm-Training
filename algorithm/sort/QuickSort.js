@@ -69,9 +69,12 @@ function partition(array, pivot, left, right) {
  * @param {number} right 右值
  */
 function swap(array, left, right) {
+  if (left === right) return;
   [array[left], array[right]] = [array[right], array[left]];
 }
 
-QuickSort(array, 0, array.length - 1);
+// QuickSort(array, 0, array.length - 1);
 
-console.log(`  Sort array is ${JSON.stringify(array)}`);
+// console.log(`  Sort array is ${JSON.stringify(array)}`);
+
+module.exports = QuickSort;

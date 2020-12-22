@@ -37,4 +37,6 @@ function SelectionSort(arr) {
   return arr;
 }
 
-console.log(`  Sort array is ${JSON.stringify(SelectionSort(array))}`);
+// console.log(`  Sort array is ${JSON.stringify(SelectionSort(array))}`);
+
+module.exports = SelectionSort;

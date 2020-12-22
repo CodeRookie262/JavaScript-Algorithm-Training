@@ -51,4 +51,6 @@ function merge(left = [], right = []) {
   return temp.concat(left.slice(leftIndex), right.slice(rightIndex));
 }
 
-console.log(`  Sort array is ${JSON.stringify(MergeSort(array))}`);
+// console.log(`  Sort array is ${JSON.stringify(MergeSort(array))}`);
+
+module.exports = MergeSort;
