@@ -7,6 +7,8 @@
 - [x] [选择排序](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/blob/main/Sort/SelectionSort.js)
 - [x] [归并排序](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/blob/main/Sort/MergeSort.js)
 - [x] [快速排序](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/blob/main/Sort/QuickSort.js)
+- [x] [桶排序](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/blob/main/Sort/BucketSort.js)
+- [x] [计数排序](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/blob/main/Sort/CountSort.js)
 
 #### 排序算法
 
