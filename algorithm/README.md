@@ -9,6 +9,7 @@
 - [x] [快速排序](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/blob/main/Sort/QuickSort.js)
 - [x] [桶排序](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/blob/main/Sort/BucketSort.js)
 - [x] [计数排序](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/blob/main/Sort/CountSort.js)
+- [x] [基数排序](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/blob/main/Sort/RadixSort.js)
 
 #### 排序算法
 
