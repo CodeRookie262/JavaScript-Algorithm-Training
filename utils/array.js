@@ -41,10 +41,11 @@ function getBlendArray(length, array_range) {
   let array = [];
   while (length--) {
     let range = Math.random();
+    let vr = Math.random();
     let value = Math.floor(
       Array.isArray(array_range)
-        ? range * (array_range[1] - array[0]) + array_range[0]
-        : range * array_range
+        ? vr * (array_range[1] - array_range[0]) + array_range[0]
+        : vr * array_range
     );
 
     if (range < 0.3) {
