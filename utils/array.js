@@ -1,3 +1,6 @@
+const EmptyCase = Array(26).fill(true),
+  LowerCase = EmptyCase.map((_, i) => String.fromCharCode(97 + i)),
+  UpperCase = EmptyCase.map((_, i) => String.fromCharCode(65 + i));
 /**
  * 生成数组根据
  * @param {number} length     数组长度
@@ -28,6 +31,39 @@ const getArray = (length, range) => {
   return res;
 };
 
+/**
+ * 生成混合数组
+ * @param {Number} length
+ * @param {[Number,Number]|Number} array_range
+ * @returns {Array<String|Number>} blendArray example => ["B",1,'a']
+ */
+function getBlendArray(length, array_range) {
+  let array = [];
+  while (length--) {
+    let range = Math.random();
+    let value = Math.floor(
+      Array.isArray(array_range)
+        ? range * (array_range[1] - array[0]) + array_range[0]
+        : range * array_range
+    );
+
+    if (range < 0.3) {
+      array.push(LowerCase[value % 26]);
+    } else if (range > 0.7) {
+      array.push(value);
+    } else {
+      array.push(UpperCase[value % 26]);
+    }
+  }
+
+  return array;
+}
+
+// console.log(getBlendArray(10, 70));
+
 module.exports = {
-  getArray
+  getArray,
+  getBlendArray,
+  LowerCase,
+  UpperCase
 };
