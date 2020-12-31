@@ -16,3 +16,5 @@
 4. [对一个包含 a-z,A-Z以及数字的数组进行排序，最终排序后结果为小写字母，数字，大写字母的数组。](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/issues/8)
 5. [如何从零实现一个 Redux？](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/issues/9)
 6. [var a = 1; 如何让 a == a.value;](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/issues/10)
+7. [写出或者简短描述函数调用：fun(2,3,4) 的输出结果。](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/issues/12)
+8. [实现 Array.prototype.reduce 方法](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/issues/13)
