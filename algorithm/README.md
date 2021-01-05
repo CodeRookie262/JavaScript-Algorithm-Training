@@ -10,7 +10,7 @@
 - [x] [桶排序](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/blob/main/algorithm/sort/BucketSort.js)
 - [x] [计数排序](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/blob/main/algorithm/sort/CountSort.js)
 - [x] [基数排序](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/blob/main/algorithm/sort/RadixSort.js)
-- [x] [基数排序](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/blob/main/algorithm/sort/binaryInsertSort.js)
+- [x] [二分插入排序](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/blob/main/algorithm/sort/binaryInsertSort.js)
 
 #### 排序算法
 
