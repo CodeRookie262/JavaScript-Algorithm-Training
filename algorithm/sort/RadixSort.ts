@@ -1,6 +1,9 @@
-const { getArray } = require('../../utils');
+import { getArray } from '../../utils';
 const array = getArray(10, [50, 180]);
 
+interface List {
+  [key: number]: number[];
+}
 /**
  * 基数排序
  *
@@ -8,10 +11,11 @@ const array = getArray(10, [50, 180]);
  *
  * 因为每个数位的数值大小在 [0,9] 之间，所以我们可以分为 10 个桶来进行每个数位的排序
  *
- * @param {Number[]} array
- * @returns {Number[]} 排序后的数组
+ * @param  array
+ * @returns  排序后的数组
  */
-function RadixSort(array) {
+
+function RadixSort(array: number[]): number[] {
   let len = array.length,
     MAX_BIT = maxBit(array),
     count = 1;
@@ -19,7 +23,7 @@ function RadixSort(array) {
 
   while (MAX_BIT) {
     // 开始计数
-    const list = {};
+    const list: List = {};
     array.forEach(item => {
       let bit = digit(item, count);
       if (!list[bit]) list[bit] = [];
@@ -45,7 +49,7 @@ function RadixSort(array) {
  * @param {Array} array
  * @returns {Number} 位数值
  */
-function maxBit(array) {
+function maxBit(array: number[]) {
   let len = array.length,
     max = Math.max(...array),
     maxBit = 0;
@@ -65,7 +69,7 @@ function maxBit(array) {
  * @param {Number}  bitNum 位数,默认为 1
  * @returns {Number} 当前位数的数字
  */
-function digit(num, bitNum = 1) {
+function digit(num: number, bitNum = 1) {
   let pow = 1;
   while (--bitNum) {
     pow *= 10;
@@ -75,4 +79,4 @@ function digit(num, bitNum = 1) {
 
 // console.log(RadixSort(array));
 
-module.exports = RadixSort;
+export { RadixSort };

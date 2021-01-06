@@ -1,4 +1,4 @@
-const { getArray } = require('../../utils');
+import { getArray } from '../../utils';
 const array = getArray(10, [50, 200]);
 /**
  *
@@ -16,7 +16,7 @@ const array = getArray(10, [50, 200]);
  * @param {Array} array 数组
  * @param {Number} bucketSize 桶容量
  */
-function BucketSort(array, bucketSize = 10) {
+function BucketSort(array: number[], bucketSize: number = 10): number[] {
   // 创建桶
   let buckets = createBuckets(array, bucketSize);
 
@@ -29,7 +29,7 @@ function BucketSort(array, bucketSize = 10) {
  * @param {Number} bucketSize 桶容量
  * @returns {Two dimensional array} buckets 桶列表
  */
-function createBuckets(array, bucketSize) {
+function createBuckets(array: number[], bucketSize: number) {
   // 获取数组的最大以及最小值，方便动态创建桶
   let len = array.length,
     // 这样写不太好，毕竟会有两次遍历的操作
@@ -37,7 +37,7 @@ function createBuckets(array, bucketSize) {
     // max = Math.max.apply(null,array);
     min = array[0],
     max = array[0],
-    buckets = [];
+    buckets: Array<number[]> = [];
 
   // 遍历数组取极值 min，max
   for (var i = 0; i < len; i++) {
@@ -65,8 +65,8 @@ function createBuckets(array, bucketSize) {
 }
 
 // 对每个桶都进行排序
-function sortBuckets(buckets) {
-  let tmp = [];
+function sortBuckets(buckets: Array<number[]>) {
+  let tmp: number[] = [];
   // console.log(buckets);
   for (var i = 0; i < buckets.length; i++) {
     tmp = tmp.concat(InsertSort(buckets[i]));
@@ -75,7 +75,7 @@ function sortBuckets(buckets) {
 }
 
 // 插入排序
-function InsertSort(array) {
+function InsertSort(array: number[]): number[] {
   let len = array.length;
   if (len <= 1) return array;
   for (var i = 1; i < len; i++) {
@@ -94,4 +94,4 @@ function InsertSort(array) {
 
 // console.log(BucketSort(array));
 
-module.exports = BucketSort;
+export { BucketSort };

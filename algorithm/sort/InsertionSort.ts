@@ -1,4 +1,4 @@
-const { getArray, logger } = require('../../utils');
+import { getArray, logger } from '../../utils';
 // logger();
 
 const arr = getArray(10, 10);
@@ -15,7 +15,7 @@ const arr = getArray(10, 10);
  * Description：
  *  插入排序会讲数组分为两个区间，分别是排序区间和未排序区间，插入排序会从未排序区间中逐一取元素与排序区间进行排序。
  */
-const InsertionSort = function InsertionSort(array) {
+const InsertionSort = function InsertionSort(array: number[]): number[] {
   const length = array.length;
 
   if (length <= 1) return array;
@@ -40,4 +40,4 @@ const InsertionSort = function InsertionSort(array) {
 //   Sort array is: ${JSON.stringify(InsertionSort(arr))}
 // `);
 
-module.exports = InsertionSort;
+export { InsertionSort };

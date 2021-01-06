@@ -1,5 +1,4 @@
-const { getArray } = require('../../utils');
-
+import { getArray } from '../../utils';
 const array = getArray(11, 100);
 
 /**
@@ -19,7 +18,7 @@ const array = getArray(11, 100);
 
 //  快排主入口
 
-function QuickSort(array, left, right) {
+function QuickSort(array: number[], left: number, right: number): void {
   // 终止条件  当区间间距为 1 时则说明数组以及是有序的了
   if (left >= right) return;
   // 选取分区点
@@ -42,7 +41,12 @@ function QuickSort(array, left, right) {
  * @param {number} left  左边界
  * @param {number} right 右边界
  */
-function partition(array, pivot, left, right) {
+function partition(
+  array: number[],
+  pivot: number,
+  left: number,
+  right: number
+): number {
   // console.log(`partition array is ${JSON.stringify(array)}`);
   // 获取区值
   let pivotValue = array[pivot];
@@ -68,7 +72,7 @@ function partition(array, pivot, left, right) {
  * @param {number} left  左值
  * @param {number} right 右值
  */
-function swap(array, left, right) {
+function swap(array: number[], left: number, right: number) {
   if (left === right) return;
   [array[left], array[right]] = [array[right], array[left]];
 }
@@ -77,4 +81,4 @@ function swap(array, left, right) {
 
 // console.log(`  Sort array is ${JSON.stringify(array)}`);
 
-module.exports = QuickSort;
+export { QuickSort };

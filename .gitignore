@@ -5,3 +5,5 @@ node_modules
 
 # 测试案例 无需提交
 test 
+
+dist

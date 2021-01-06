@@ -1,4 +1,4 @@
-const { getArray } = require('../../utils');
+import { getArray } from '../../utils';
 
 // 冒泡排序
 console.log('==========BubbleSort=============');
@@ -17,7 +17,7 @@ const arr = getArray(10, 10);
  * （我有一个想法，那它岂不是可以找 第K值 ）
  */
 
-const BubbleSort = function BubbleSort(array) {
+const BubbleSort = function BubbleSort(array: number[]): number[] {
   for (var i = 0, length = array.length; i < length; i++) {
     // 判断这一轮是否发生过元素交换，有就继续执行，没有的话则说明已经全部排序 OK ，直接 return 即可。
     let isChange = false;
@@ -38,4 +38,4 @@ const BubbleSort = function BubbleSort(array) {
 //   Sort array is: ${JSON.stringify(BubbleSort(arr))}
 //   `);
 
-module.exports = BubbleSort;
+export { BubbleSort };

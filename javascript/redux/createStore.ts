@@ -1,3 +1,4 @@
+/// <reference path="./index.d.ts" />
 /**
  * createStore
  * 创建 store 对象，并将对象返回
@@ -5,21 +6,25 @@
  * @param {Function} [middleware] 中间件
  * @returns {{dispatch: Function,getState: Function,subscribe: Function}}  state 操作对象
  */
-function createStore(reducer, middleware) {
+
+const createStore: CreateStore = function createStore(
+  reducer,
+  middleware
+): Store {
   // store 状态
-  let state;
+  let state: State;
   //监听队列
-  let listers = [];
+  let listers: Array<Observer> = [];
 
   /**
    * 获取最新的 state
    * @returns {store} state
    */
-  function getState() {
+  const getState: GetState = function getState() {
     const { parse, stringify } = JSON;
     // 为了安全起见，返回深拷贝后的 state 对象，防止组件随意增加属性造成数据污染
     return parse(stringify(state));
-  }
+  };
 
   /**
    * 发布函数
@@ -27,7 +32,7 @@ function createStore(reducer, middleware) {
    * @param {{type: string,[key:string]:any}} action
    * @returns {{[key:string]: any}} action
    */
-  function dispatch(action) {
+  const dispatch: Dispatch = function dispatch(action: Action): Action {
     // 将 action 派发给 reducer 函数进行状态处理，并且更新最新的 state
     state = reducer(state, action);
 
@@ -36,14 +41,16 @@ function createStore(reducer, middleware) {
 
     // 将此次分发的 action 返回出去
     return action;
-  }
+  };
 
   /**
    * 订阅函数
    * @param {Function} lister 监听函数
    * @returns {Function} disconnect 注销监听
    */
-  function subscribe(lister) {
+  const subscribe: Subscribe = function subscribe(
+    lister: Observer
+  ): Disconnect {
     if (typeof lister !== 'function') {
       console.warn(
         'The Lister parameter of the subscribe function must be a function'
@@ -66,10 +73,10 @@ function createStore(reducer, middleware) {
     return function () {
       listers = listers.filter(observer => observer !== lister);
     };
-  }
+  };
 
   if (typeof middleware === 'function') {
-    return middleware(createStore)(reducer);
+    return middleware(createStore)(reducer) as Store;
   }
   // 初始化 state
   dispatch({ type: `CODE_ROOKIE_262@@${Date.now().toString(16)}` });
@@ -79,6 +86,6 @@ function createStore(reducer, middleware) {
     getState,
     subscribe
   };
-}
+};
 
 export default createStore;

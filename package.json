@@ -1,0 +1,25 @@
+{
+  "name": "JavaScript-Algorithm-Training",
+  "version": "1.0.0",
+  "description": "和笔者一同巩固前端基础知识，了解并熟悉框架实现原理，数据结构与算法训练吧~",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeRookie262/JavaScript-Algorithm-Training.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeRookie262/JavaScript-Algorithm-Training/issues"
+  },
+  "homepage": "https://github.com/CodeRookie262/JavaScript-Algorithm-Training#readme"
+}

@@ -1,4 +1,4 @@
-const { getArray } = require('../../utils');
+import { getArray } from '../../utils';
 const array = getArray(10, 10);
 
 /**
@@ -9,7 +9,7 @@ const array = getArray(10, 10);
  * @returns {Number[]} array
  */
 // 解法一 不推荐，开辟一个长度为 max 的数组太耗内存了，较为极端情况 [1,10000]
-function CountSort(array) {
+function CountSort(array: number[]): number[] {
   const len = array.length;
   if (len <= 1) return array;
 
@@ -32,11 +32,16 @@ function CountSort(array) {
     }
   });
   console.log(array);
+
+  return array;
 }
 
+interface List {
+  [key: string]: number;
+}
 // 解法二 采用 hash 表进行 {value: count} 互相关联，减少不必要的内存开销
-function CountSort(array) {
-  let list = {};
+function CountSort1(array: number[]): number[] {
+  let list: List = {};
 
   array.forEach(item => {
     if (!list[item]) list[item] = 0;
@@ -57,4 +62,4 @@ function CountSort(array) {
 
 // console.log(CountSort(array));
 
-module.exports = CountSort;
+export { CountSort };

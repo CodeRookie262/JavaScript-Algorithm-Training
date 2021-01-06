@@ -7,7 +7,10 @@ const EmptyCase = Array(26).fill(true),
  * @param {[Start,End] | Number} range     数组边界
  * @returns 原数组
  */
-const getArray = (length, range) => {
+const getArray = (
+  length: number,
+  range: number | [number, number]
+): number[] => {
   const res = [];
   const getItem = (start = 0, end = Number.MAX_SAFE_INTEGER) =>
     (Math.random() * (end - start + 1) + start) | 0;
@@ -18,7 +21,7 @@ const getArray = (length, range) => {
     }
   } else if (/number|undefined/.test(typeof range)) {
     for (var i = 0; i < length; i++) {
-      res[i] = getItem(0, range);
+      res[i] = getItem(0, range as number);
     }
   }
 
@@ -37,7 +40,10 @@ const getArray = (length, range) => {
  * @param {[Number,Number]|Number} array_range
  * @returns {Array<String|Number>} blendArray example => ["B",1,'a']
  */
-function getBlendArray(length, array_range) {
+function getBlendArray(
+  length: number,
+  array_range: number | [number, number]
+): Array<number | string> {
   let array = [];
   while (length--) {
     let range = Math.random();
@@ -62,9 +68,4 @@ function getBlendArray(length, array_range) {
 
 // console.log(getBlendArray(10, 70));
 
-module.exports = {
-  getArray,
-  getBlendArray,
-  LowerCase,
-  UpperCase
-};
+export { getArray, getBlendArray, LowerCase, UpperCase };

@@ -1,4 +1,4 @@
-const { getArray } = require('../../utils');
+import { getArray } from '../../utils';
 
 /**
  * 数组中的第K个最大元素
@@ -7,7 +7,7 @@ const { getArray } = require('../../utils');
  *
  * link: https://leetcode-cn.com/problems/kth-largest-element-in-an-array
  */
-const findKthLargest = function (nums, k) {
+const findKthLargest = function (nums: number[], k: number): number {
   // 终止条件
   const len = nums.length;
   if (k > len) return -1;
@@ -27,12 +27,12 @@ const findKthLargest = function (nums, k) {
 
 // 解法1：排序后再取第 K 个最大值
 
-function solution1(nums, k) {
+function solution1(nums: number[], k: number): number {
   return nums.sort((a, b) => b - a)[k - 1];
 }
 
 // 解法二：快速选择 利用快排中分区函数 partition 进行递归查找
-function partition(arr, start, end) {
+function partition(arr: number[], start: number, end: number): number {
   let pivotValue = arr[end],
     startIndex = start;
 
@@ -47,9 +47,11 @@ function partition(arr, start, end) {
   return startIndex;
 }
 
-function swap(arr, i, j) {
+function swap(arr: number[], i: number, j: number): void {
   if (i === j) return;
   [arr[i], arr[j]] = [arr[j], arr[i]];
 }
 
 console.log(`  第 K 个最大值为 ${findKthLargest(getArray(10, [50, 410]), 3)}`);
+
+export { findKthLargest };

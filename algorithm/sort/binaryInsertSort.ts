@@ -1,40 +1,13 @@
 ('use strict');
-const { getArray } = require('../../utils');
+import { getArray } from '../../utils';
 const array = getArray(10, [30, 90]);
 
 // console.log(array);
 /**
- * 二分插入排序
- * @param {number[]} array
- */
-function binarySearch(arr) {
-  for (var i = 1; i < arr.length; i++) {
-    var key = arr[i],
-      left = 0,
-      right = i - 1;
-
-    //和插入排序一样有左右区间
-    while (left <= right) {
-      var middle = Math.floor((left + right) / 2);
-      if (key < arr[middle]) {
-        right = middle - 1;
-      } else {
-        left = middle + 1;
-      }
-    }
-    for (var j = i - 1; j >= left; j--) {
-      arr[j + 1] = arr[j];
-    }
-    arr[left] = key;
-  }
-  return arr;
-}
-
-/**
  *  二分插入排序
  * @param {number[]} arr
  */
-function BinaryInsertSort(arr) {
+function BinaryInsertSort(arr: number[]): number[] {
   let len = arr.length;
   if (len <= 1) return array;
 
@@ -73,4 +46,4 @@ function BinaryInsertSort(arr) {
 
 console.log(BinaryInsertSort(array));
 
-module.exports = binarySearch;
+export { BinaryInsertSort };

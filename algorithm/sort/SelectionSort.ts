@@ -1,4 +1,4 @@
-const { getArray } = require('../../utils');
+import { getArray } from '../../utils';
 
 const array = getArray(10, 10);
 
@@ -14,7 +14,7 @@ const array = getArray(10, 10);
  * description:
  *  选择排序和插入排序有点类似，也是分为排序和未排序区间，区别在于选择排序是将未排序区间的最小值放置到排序区间的最后一位。
  */
-function SelectionSort(arr) {
+function SelectionSort(arr: number[]): number[] {
   const length = array.length;
 
   if (length <= 1) return arr;
@@ -39,4 +39,4 @@ function SelectionSort(arr) {
 
 // console.log(`  Sort array is ${JSON.stringify(SelectionSort(array))}`);
 
-module.exports = SelectionSort;
+export { SelectionSort };

@@ -1,4 +1,4 @@
-const { getArray } = require('../../utils');
+import { getArray } from '../../utils';
 
 const array = getArray(10, 10);
 /**
@@ -13,7 +13,7 @@ const array = getArray(10, 10);
  */
 
 // 归并排序主入口
-function MergeSort(arr) {
+function MergeSort(arr: number[]): number[] {
   const length = arr.length;
 
   if (length <= 1) return arr;
@@ -33,7 +33,7 @@ function MergeSort(arr) {
  * @param right 右区间
  */
 //  合并数组
-function merge(left = [], right = []) {
+function merge(left: number[] = [], right: number[] = []): number[] {
   let temp = [],
     leftIndex = 0,
     rightIndex = 0;
@@ -53,4 +53,4 @@ function merge(left = [], right = []) {
 
 // console.log(`  Sort array is ${JSON.stringify(MergeSort(array))}`);
 
-module.exports = MergeSort;
+export { MergeSort };
