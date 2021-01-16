@@ -8,7 +8,6 @@
 2. [Array 与 Linked List 有什么区别，分别适用于哪一些场景？](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/issues/4)
 3. [求一个数的平方根，精确到小数点后六位。](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/issues/11)
 4. [求两数之和](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/issues/14)
-5. [说说 Http 强缓存与协商缓存](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/issues/15)
 
 ## JavaScript-training
 
@@ -20,3 +19,12 @@
 6. [var a = 1; 如何让 a == a.value;](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/issues/10)
 7. [写出或者简短描述函数调用：fun(2,3,4) 的输出结果。](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/issues/12)
 8. [实现 Array.prototype.reduce 方法](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/issues/13)
+9. [编程题：实现一个add方法](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/issues/16)
+10. [编程题：不产生新数组，删除数组里的重复元素。](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/issues/17)
+11. [var，let以及const的区别](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/issues/19)
+
+## netWork
+
+
+1. [说说 Http 强缓存与协商缓存](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/issues/15)
+2. [说说 TCP 和 UDP 的区别](https://github.com/CodeRookie262/JavaScript-Algorithm-Training/issues/18)
