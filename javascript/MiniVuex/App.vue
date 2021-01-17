@@ -16,9 +16,7 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
-import { mapState, mapGetters, mapMutations, mapActions } from "./myVuex";
+import { mapState, mapGetters, mapMutations, mapActions } from "./MiniVuex";
 
 export default {
   name: "App",

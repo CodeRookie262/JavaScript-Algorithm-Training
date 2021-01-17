@@ -1,6 +1,6 @@
 import Vue from 'vue';
 
-import Vuex from '../myVuex';
+import Vuex from '../MiniVuex';
 
 Vue.use(Vuex);
 const asyncRunner = (time, payload) =>

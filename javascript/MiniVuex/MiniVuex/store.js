@@ -10,6 +10,7 @@ const NS = Symbol('NS');
 
 const nameSpace = new Map();
 window.nameSpace = nameSpace;
+
 class Store {
   constructor({
     state,
@@ -35,8 +36,8 @@ class Store {
       nameSpace.set('root', this);
     }
     if (Object.keys(modules).length > 0) {
-      console.log('存在模块', this[NS]);
-      forEachObj(modules, function(key, subOption) {
+      // console.log('存在模块', this[NS]);
+      forEachObj(modules, function (key, subOption) {
         let instance = new Store(
           Object.assign(subOption, { [NS]: `${options[NS]}/${key}` })
         );
