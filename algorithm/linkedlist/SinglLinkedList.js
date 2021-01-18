@@ -27,6 +27,10 @@ class SinglLinkedList {
     this[HEAD] = new Node(HEAD);
   }
 
+  get() {
+    return this[HEAD].next;
+  }
+
   /**
    * 添加节点(可填入多个)
    * @param  {...any} nodes
@@ -118,12 +122,28 @@ class SinglLinkedList {
     curNode.next = curNode.next.next;
     return true;
   }
+
+  reverse() {
+    let cur = this[HEAD].next;
+    let pre = null;
+
+    while (cur) {
+      let next = cur.next;
+      cur.next = pre;
+      pre = cur;
+      cur = next;
+    }
+
+    return (this[HEAD].next = pre);
+  }
 }
 
 // const listedList = new SinglLinkedList();
+// listedList.append(1, 2, 3, 4, 5, 6);
 // listedList.append(4, 6, 9);
 // listedList.insert(4, 77);
 // // listedList.remove(6);
-// console.log(listedList.findIndex(1));
+// console.log(listedList.reverse());
+// listedList.reverse();
 
 module.exports = SinglLinkedList;
